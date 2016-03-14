@@ -80,9 +80,9 @@ public class NewsListView extends AppCompatActivity {
 
                 Intent intent = new Intent(NewsListView.this, NewsDetail.class);
                 intent.putExtra("Title", titleFullStrings[i]);
-                intent.putExtra("image", photoNewsStrings[i]);
-                intent.putExtra("date", dateStrings[i]);
-                intent.putExtra("deatail", detailStrings[i]);
+                intent.putExtra("Image", photoNewsStrings[i]);
+                intent.putExtra("Date", dateStrings[i]);
+                intent.putExtra("Detail", detailStrings[i]);
                 startActivity(intent);
 
             } // on item click
