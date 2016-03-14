@@ -45,7 +45,8 @@
         <activity android:name=".NewsLsitView" />
         <activity android:name=".NewsDetail" />
         <activity android:name=".NewsListView" />
-        <activity android:name=".CallListView"></activity>
+        <activity android:name=".CallListView" />
+        <activity android:name=".CallPhone"></activity>
     </application>
 
 </manifest>
