@@ -27,7 +27,7 @@ public class HubActivity extends AppCompatActivity {
     }   // Main Method
 
     public void clickNews(View view) {
-        Intent intent = new Intent(HubActivity.this, NewsLsitView.class);
+        Intent intent = new Intent(HubActivity.this, NewsListView.class);
         startActivity(intent);
     }
 
