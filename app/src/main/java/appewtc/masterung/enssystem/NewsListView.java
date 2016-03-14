@@ -51,6 +51,7 @@ public class NewsListView extends AppCompatActivity {
         final String[] dateStrings = new String[intCount];
         final String[] photoNewsStrings = new String[intCount];
         final String[] detailStrings = new String[intCount];
+        final String[] videoStrings = new String[intCount];
 
 
         for (int i = 0; i < intCount; i++) {
@@ -59,6 +60,7 @@ public class NewsListView extends AppCompatActivity {
             dateStrings[i] = cursor.getString(cursor.getColumnIndex(ManageTABLE.COLUMN_Day_News));
             photoNewsStrings[i] = cursor.getString(cursor.getColumnIndex(ManageTABLE.COLUMN_Photo_News));
             detailStrings[i] = cursor.getString(cursor.getColumnIndex(ManageTABLE.COLUMN_Detail_News));
+            videoStrings[i] = cursor.getString(cursor.getColumnIndex(ManageTABLE.COLUMN_Video_News));
 
 
             titleShortStrings[i] = titleFullStrings[i].substring(0, intDigit) + "...";
@@ -83,6 +85,7 @@ public class NewsListView extends AppCompatActivity {
                 intent.putExtra("Image", photoNewsStrings[i]);
                 intent.putExtra("Date", dateStrings[i]);
                 intent.putExtra("Detail", detailStrings[i]);
+                intent.putExtra("Video", videoStrings[i]);
                 startActivity(intent);
 
             } // on item click

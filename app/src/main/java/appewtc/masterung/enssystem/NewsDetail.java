@@ -2,6 +2,8 @@ package appewtc.masterung.enssystem;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -9,12 +11,13 @@ import com.squareup.picasso.Picasso;
 
 import org.w3c.dom.Text;
 
-public class NewsDetail extends AppCompatActivity {
+public class NewsDetail extends AppCompatActivity implements View.OnClickListener {
 
     //Explicit
     private TextView titleTextView, dateTextView, detailTextView;
     private ImageView newsImageView;
-    private String titleString, dateString, detailString, urlNewsImageString;
+    private String titleString, dateString, detailString, urlNewsImageString, videoString;
+    private Button backButton, videoButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +30,21 @@ public class NewsDetail extends AppCompatActivity {
         //Show view
         showView();
 
+        //button controller
+        buttonController();
 
 
 
     } // mian method
+
+    private void buttonController() {
+        backButton.setOnClickListener(this);
+        videoButton.setOnClickListener(this);
+
+
+
+
+    }
 
     private void showView() {
 
@@ -50,7 +64,6 @@ public class NewsDetail extends AppCompatActivity {
                 .into(newsImageView);
 
 
-
     }//show view
 
     private void bindwidget() {
@@ -59,8 +72,42 @@ public class NewsDetail extends AppCompatActivity {
         dateTextView = (TextView) findViewById(R.id.txtDay);
         detailTextView = (TextView) findViewById(R.id.txtDetail);
         newsImageView = (ImageView) findViewById(R.id.imvDetail);
+        backButton = (Button) findViewById(R.id.bttDetailBack);
+        videoButton = (Button) findViewById(R.id.bttDetailVideo);
 
     }
 
 
+    @Override
+    public void onClick(View view) {
+
+        switch (view.getId()) {
+            case R.id.bttDetailBack:
+                finish();
+                break;
+            case R.id.bttDetailVideo:
+
+                showVideoView();
+
+                break;
+        } //switch
+    } //onclick
+
+    private void showVideoView() {
+
+        videoString = getIntent().getStringExtra("Video");
+        if (videoString.length() != 0) {
+
+
+        } else {
+            //null
+
+            MyAlertDialog myAlertDialog = new MyAlertDialog();
+            myAlertDialog.MyDialog(NewsDetail.this, R.drawable.icon_question,
+            "ไม่สามรถแสดง วีดีโอ ได้", "ไม่สามรถแสดง เนื่องด้วยข่าวนี้ไม่มี วีดีโอ");
+        }
+
+
+
+    }//show video view
 } //main class
