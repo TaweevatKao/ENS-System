@@ -1,5 +1,7 @@
 package appewtc.masterung.enssystem;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -97,6 +99,10 @@ public class NewsDetail extends AppCompatActivity implements View.OnClickListene
 
         videoString = getIntent().getStringExtra("Video");
         if (videoString.length() != 0) {
+            //Have
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse(videoString));
+            startActivity(intent);
 
 
         } else {
