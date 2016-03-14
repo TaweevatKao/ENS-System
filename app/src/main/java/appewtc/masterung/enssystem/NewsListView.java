@@ -1,10 +1,12 @@
 package appewtc.masterung.enssystem;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 public class NewsListView extends AppCompatActivity {
@@ -43,11 +45,12 @@ public class NewsListView extends AppCompatActivity {
         Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + ManageTABLE.TABLE_newsTABLE, null);
         cursor.moveToFirst();
 
-        int intCount = cursor.getCount();
-        String[] titleFullStrings = new String[intCount];
+        final int intCount = cursor.getCount();
+        final String[] titleFullStrings = new String[intCount];
         String[] titleShortStrings = new String[intCount];
-        String[] dateStrings = new String[intCount];
-        String[] photoNewsStrings = new String[intCount];
+        final String[] dateStrings = new String[intCount];
+        final String[] photoNewsStrings = new String[intCount];
+        final String[] detailStrings = new String[intCount];
 
 
         for (int i = 0; i < intCount; i++) {
@@ -55,9 +58,10 @@ public class NewsListView extends AppCompatActivity {
             titleFullStrings[i] = cursor.getString(cursor.getColumnIndex(ManageTABLE.COLUMN_Title_News));
             dateStrings[i] = cursor.getString(cursor.getColumnIndex(ManageTABLE.COLUMN_Day_News));
             photoNewsStrings[i] = cursor.getString(cursor.getColumnIndex(ManageTABLE.COLUMN_Photo_News));
+            detailStrings[i] = cursor.getString(cursor.getColumnIndex(ManageTABLE.COLUMN_Detail_News));
 
 
-            titleShortStrings[i] = titleFullStrings[i].substring(0, intDigit);
+            titleShortStrings[i] = titleFullStrings[i].substring(0, intDigit) + "...";
 
 
             cursor.moveToNext();
@@ -69,6 +73,20 @@ public class NewsListView extends AppCompatActivity {
         NewsAdapter newsAdapter = new NewsAdapter(NewsListView.this,
                 titleShortStrings, dateStrings, photoNewsStrings);
         newListView.setAdapter(newsAdapter);
+
+        newListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                Intent intent = new Intent(NewsListView.this, NewsDetail.class);
+                intent.putExtra("Title", titleFullStrings[i]);
+                intent.putExtra("image", photoNewsStrings[i]);
+                intent.putExtra("date", dateStrings[i]);
+                intent.putExtra("deatail", detailStrings[i]);
+                startActivity(intent);
+
+            } // on item click
+        });
 
 
     }//create ListView
