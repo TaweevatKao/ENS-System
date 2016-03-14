@@ -26,6 +26,11 @@ public class HubActivity extends AppCompatActivity {
 
     }   // Main Method
 
+    public void clickNews(View view) {
+        Intent intent = new Intent(HubActivity.this, NewsLsitView.class);
+        startActivity(intent);
+    }
+
     @Override
     protected void onStart() {
         super.onStart();
