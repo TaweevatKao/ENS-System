@@ -44,7 +44,8 @@
             android:label="@string/title_activity_maps" />
         <activity android:name=".NewsLsitView" />
         <activity android:name=".NewsDetail" />
-        <activity android:name=".NewsListView"></activity>
+        <activity android:name=".NewsListView" />
+        <activity android:name=".CallListView"></activity>
     </application>
 
 </manifest>
