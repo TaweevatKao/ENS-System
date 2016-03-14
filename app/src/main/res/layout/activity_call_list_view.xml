@@ -13,7 +13,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="เบอร์ฉุกเฉิน"
+        android:text="เบอร์โทรฉุกเฉิน"
         android:id="@+id/textView24"
         android:layout_margin="20dp"
         android:layout_centerHorizontal="true"
