@@ -15,8 +15,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-    private static final double latCenterDOUBLE = 13.66752591;
-    private static final double lngCenterDOUBLE = 100.62174082;
+    private static final double latCenterDOUBLE = 13.678235;
+    private static final double lngCenterDOUBLE = 101.069349;
     private double latMarkerADouble, lngMarkerADouble;
 
 

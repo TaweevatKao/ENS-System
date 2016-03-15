@@ -65,7 +65,7 @@ public class InformActivity extends AppCompatActivity implements View.OnClickLis
 
         if (latADouble != 0) {
             TextView showLocation = (TextView) findViewById(R.id.textView20);
-            showLocation.setText("Have Location Finish");
+            showLocation.setText("เลือกพิกัดที่เกิดเหตุฯแล้ว");
         }  //if
 
     } // onRestart
@@ -89,7 +89,7 @@ public class InformActivity extends AppCompatActivity implements View.OnClickLis
 
         if (latADouble != 0) {
             TextView showLocation = (TextView) findViewById(R.id.textView20);
-            showLocation.setText("Have Location Finish");
+            showLocation.setText("เลือกพิกัดที่เกิดเหตุฯแล้ว");
         }  //if
 
     }
@@ -154,14 +154,14 @@ public class InformActivity extends AppCompatActivity implements View.OnClickLis
                 if (phoneString.equals("") || detailString.equals("")) {
                     MyAlertDialog myAlertDialog = new MyAlertDialog();
                     myAlertDialog.MyDialog(InformActivity.this, R.drawable.icon_question,
-                            "มีช่องว่าง", "กรุณากรอกให้ครบ คะ");
+                            "มีช่องว่าง", "กรุณากรอกให้ครบ ค่ะ");
                 } else {
 
                     if ((latADouble == 0) || (lngADouble == 0)) {
 
                         MyAlertDialog myAlertDialog = new MyAlertDialog();
                         myAlertDialog.MyDialog(InformActivity.this, R.drawable.icon_question,
-                                "ยังไม่เลือกพิกัด", "กรุณาเลือก พิกัด");
+                                "ยังไม่เลือกพิกัด", "กรุณาเลือกพิกัดที่เกิดเหตุ");
 
                     } else {
                         getDateFromDatePicker();

@@ -94,7 +94,7 @@ public class SignUpActivity extends AppCompatActivity {
             MyAlertDialog objMyAlertDialog = new MyAlertDialog();
             objMyAlertDialog.MyDialog(SignUpActivity.this,
                     R.drawable.icon_question, "กรอกข้อมูลไม่ครบ",
-                    "กรุณากรอกข้อมูล และ เลือกข้อมูล ให้ครบ คะ");
+                    "กรุณากรอกข้อมูล และ เลือกข้อมูล ให้ครบค่ะ");
         } else {
             //No Space
             if (checkConfirmPass()) {
@@ -137,7 +137,7 @@ public class SignUpActivity extends AppCompatActivity {
             String[] resultStrings = objManageTABLE.searchUser(userString);
             MyAlertDialog objMyAlertDialog = new MyAlertDialog();
             objMyAlertDialog.MyDialog(SignUpActivity.this, R.drawable.icon_question,
-                    "User ซ้ำ", "User " + resultStrings[1] + " ซ้ำ โปรดเปลี่ยน User ใหม่ ?");
+                    "User นี้มีผู้ใช้งานแล้ว", "User " + resultStrings[1] + " ซ้ำ โปรดเปลี่ยน User ใหม่ ?");
 
         } catch (Exception e) {
             confirmSignUp();

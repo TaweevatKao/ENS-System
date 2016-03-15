@@ -60,7 +60,7 @@
                     android:id="@+id/editText7"
                     android:layout_weight="2"
                     android:hint="@string/phonebox"
-                    android:inputType="text" />
+                    android:inputType="number" />
             </LinearLayout>
 
             <LinearLayout
@@ -136,9 +136,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No Location"
+                android:text="ยังไม่เลือกพิกัดที่เกิดเหตุฯ"
                 android:id="@+id/textView20"
-                android:textSize="@dimen/h1" />
+                android:textSize="30dp" />
 
             <Button
                 android:layout_width="match_parent"

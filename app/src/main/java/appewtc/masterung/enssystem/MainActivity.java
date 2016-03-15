@@ -221,7 +221,7 @@ public class MainActivity extends AppCompatActivity {
             //Have Space
             MyAlertDialog objMyAlertDialog = new MyAlertDialog();
             objMyAlertDialog.MyDialog(MainActivity.this, R.drawable.icon_question,
-                    "Have Space", "Please Fill All Every Blank");
+                    "กรอกข้อมูลไม่ครบ", "กรุณากรอกข้อมูล Login  ให้ครบค่ะ");
 
         } else {
             //No Space
