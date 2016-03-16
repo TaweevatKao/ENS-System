@@ -64,11 +64,12 @@
         android:layout_height="wrap_content"
         android:text="SKIP LOGIN >>"
         android:id="@+id/textView18"
-        android:textSize="@dimen/h1"
+        android:textSize="@dimen/h2"
         android:layout_alignParentRight="true"
         android:layout_above="@+id/linBotton"
         android:layout_marginRight="10dp"
         android:clickable="true"
-        android:onClick="clickSkip" />
+        android:onClick="clickSkip"
+        android:layout_marginBottom="50dp" />
 
 </RelativeLayout>

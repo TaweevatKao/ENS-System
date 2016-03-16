@@ -154,14 +154,14 @@ public class InformActivity extends AppCompatActivity implements View.OnClickLis
                 if (phoneString.equals("") || detailString.equals("")) {
                     MyAlertDialog myAlertDialog = new MyAlertDialog();
                     myAlertDialog.MyDialog(InformActivity.this, R.drawable.icon_question,
-                            "มีช่องว่าง", "กรุณากรอกให้ครบ ค่ะ");
+                            "มีช่องว่าง", "กรุณากรอกข้อมูลให้ครบ");
                 } else {
 
                     if ((latADouble == 0) || (lngADouble == 0)) {
 
                         MyAlertDialog myAlertDialog = new MyAlertDialog();
                         myAlertDialog.MyDialog(InformActivity.this, R.drawable.icon_question,
-                                "ยังไม่เลือกพิกัด", "กรุณาเลือกพิกัดที่เกิดเหตุ");
+                                "ยังไม่ระบุพิกัด", "กรุณาระบุพิกัดที่เกิดเหตุฯ");
 
                     } else {
                         getDateFromDatePicker();

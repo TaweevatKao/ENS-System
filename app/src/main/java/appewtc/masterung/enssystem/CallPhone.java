@@ -35,7 +35,7 @@ public class CallPhone extends AppCompatActivity {
         String[] callStrings = getIntent().getStringArrayExtra("Call");
         String[] phoneStrings = getIntent().getStringArrayExtra("Phone");
 
-        PhoneAdapter phoneAdapter = new PhoneAdapter(CallPhone.this, callStrings, phoneStrings);
+        PhoneAdapter phoneAdapter = new PhoneAdapter(CallPhone.this, phoneStrings, callStrings);
         phoneListView.setAdapter(phoneAdapter);
 
 
