@@ -5,7 +5,7 @@
 
     <string-array name="cat0_name">
 
-        <item>สถานีดับเพลิงเทศบาลเมืองฉะเชิงเทรา</item>
+        <item>สถานีดับเพลิงเทศบาลเมือง</item>
 
 
     </string-array>
@@ -17,7 +17,7 @@
 
     <string-array name="cat1_name">
 
-        <item>โรงพยาบาลเมืองฉะเชิงเทรา</item>
+        <item>โรงพยาบาลเมือง</item>
         <item>โรงพยาบาลบ้านโพธิ์</item>
         <item>โรงพยาบาลบางคล้า</item>
         <item>โรงพยาบาลบางน้ำเปรี้ยว</item>
@@ -100,7 +100,7 @@
 
     <string-array name="cat4_name">
 
-        <item>สำนักงานประปาฉะเชิงเทรา</item>
+        <item>สำนักงานประปา</item>
 
     </string-array>
 

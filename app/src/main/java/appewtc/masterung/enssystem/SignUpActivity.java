@@ -94,7 +94,7 @@ public class SignUpActivity extends AppCompatActivity {
             MyAlertDialog objMyAlertDialog = new MyAlertDialog();
             objMyAlertDialog.MyDialog(SignUpActivity.this,
                     R.drawable.icon_question, "กรอกข้อมูลไม่ครบ",
-                    "กรุณากรอกข้อมูล และ เลือกข้อมูล ให้ครบค่ะ");
+                    "กรุณากรอกข้อมูล และ เลือกข้อมูล ให้ครบ");
         } else {
             //No Space
             if (checkConfirmPass()) {
@@ -106,7 +106,7 @@ public class SignUpActivity extends AppCompatActivity {
                 myAlertDialog.MyDialog(SignUpActivity.this,
                         R.drawable.icon_question,
                         "Password พิมพ์ผิด",
-                        "กรุณาพิมพ์ Password ให้เหมือนกัน");
+                        "กรุณาพิมพ์ Password ให้ตรงกัน");
             }
 
 
@@ -149,7 +149,7 @@ public class SignUpActivity extends AppCompatActivity {
 
         AlertDialog.Builder objBuilder = new AlertDialog.Builder(this);
         objBuilder.setIcon(R.drawable.logo48);
-        objBuilder.setTitle("โปรดตรวจข้อมูล");
+        objBuilder.setTitle("โปรดตรวจสอบข้อมูล");
         objBuilder.setMessage("User = " + userString + "\n" +
 
                 "ชื่อ = " + nameString + "\n" +

@@ -221,7 +221,7 @@ public class MainActivity extends AppCompatActivity {
             //Have Space
             MyAlertDialog objMyAlertDialog = new MyAlertDialog();
             objMyAlertDialog.MyDialog(MainActivity.this, R.drawable.icon_question,
-                    "กรอกข้อมูลไม่ครบ", "กรุณากรอกข้อมูล Login  ให้ครบค่ะ");
+                    "กรอกข้อมูลไม่ครบ", "กรุณากรอกข้อมูล Login  ให้ครบ");
 
         } else {
             //No Space
@@ -251,7 +251,7 @@ public class MainActivity extends AppCompatActivity {
                 //Password False
                 MyAlertDialog objMyAlertDialog = new MyAlertDialog();
                 objMyAlertDialog.MyDialog(MainActivity.this, R.drawable.icon_question,
-                        "Password False", "โปรกรอก Password ใหม่ คุณกรอกผิด");
+                        "Password ผิดพลาด", "กรุณากรอก Password ใหม่");
 
             }
 
