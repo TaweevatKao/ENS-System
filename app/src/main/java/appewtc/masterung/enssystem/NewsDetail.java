@@ -16,9 +16,11 @@ import org.w3c.dom.Text;
 public class NewsDetail extends AppCompatActivity implements View.OnClickListener {
 
     //Explicit
-    private TextView titleTextView, dateTextView, detailTextView;
+    private TextView titleTextView, dateTextView, detailTextView,
+                        video1TextView,video2TextView;
     private ImageView newsImageView;
-    private String titleString, dateString, detailString, urlNewsImageString, videoString;
+    private String titleString, dateString, detailString,
+                    urlNewsImageString, videoString;
     private Button backButton, videoButton;
 
     @Override
@@ -39,6 +41,8 @@ public class NewsDetail extends AppCompatActivity implements View.OnClickListene
 
     } // mian method
 
+
+
     private void buttonController() {
         backButton.setOnClickListener(this);
         videoButton.setOnClickListener(this);
@@ -55,6 +59,15 @@ public class NewsDetail extends AppCompatActivity implements View.OnClickListene
         urlNewsImageString = getIntent().getStringExtra("Image");
         dateString = getIntent().getStringExtra("Date");
         detailString = getIntent().getStringExtra("Detail");
+        videoString = getIntent().getStringExtra("Video");
+
+
+        if (videoString.length() == 0) {
+            //No Video
+            video1TextView.setVisibility(View.INVISIBLE);
+            video2TextView.setVisibility(View.INVISIBLE);
+        }
+
 
         titleTextView.setText(titleString);
         dateTextView.setText(dateString);
@@ -76,6 +89,8 @@ public class NewsDetail extends AppCompatActivity implements View.OnClickListene
         newsImageView = (ImageView) findViewById(R.id.imvDetail);
         backButton = (Button) findViewById(R.id.bttDetailBack);
         videoButton = (Button) findViewById(R.id.bttDetailVideo);
+        video1TextView = (TextView) findViewById(R.id.textView27);
+        video2TextView = (TextView) findViewById(R.id.textView28);
 
     }
 
@@ -97,24 +112,11 @@ public class NewsDetail extends AppCompatActivity implements View.OnClickListene
         } //switch
     } //onclick
 
-    private void showVideoView() {
+    public void showVideoView(View view) {
 
-        videoString = getIntent().getStringExtra("Video");
-        if (videoString.length() != 0) {
-            //Have
-            Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setData(Uri.parse(videoString));
-            startActivity(intent);
-
-
-        } else {
-            //null
-
-            MyAlertDialog myAlertDialog = new MyAlertDialog();
-            myAlertDialog.MyDialog(NewsDetail.this, R.drawable.icon_question,
-            "ไม่สามรถแสดง วีดีโอ ได้", "ไม่สามรถแสดง เนื่องด้วยข่าวนี้ไม่มี วีดีโอ");
-        }
-
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(videoString));
+        startActivity(intent);
 
 
     }//show video view
