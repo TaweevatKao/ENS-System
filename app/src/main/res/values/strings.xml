@@ -41,6 +41,7 @@
     <string name="title_activity_maps">Map</string>
 
     <string name="video">วิดีโอ ที่เกี่ยวข้อง</string>
+    <string name="district">อำเภอที่เกิดเหตุ</string>
 
 
 </resources>

@@ -32,7 +32,7 @@ public class InformActivity extends AppCompatActivity implements View.OnClickLis
     private TextView showNameTextView;
     private DatePicker datePicker;
     private EditText phoneEditText, detailEditText;
-    private Spinner typeSpinner;
+    private Spinner typeSpinner, districtSpinner;
     private Button addPhotoButton, addVideoButton,
             addLocationButton, updateToSQLButton;
     private String nameLoginString, dateString, phoneString, detailString,
@@ -52,12 +52,31 @@ public class InformActivity extends AppCompatActivity implements View.OnClickLis
 
         typeController();
 
+        districtController();
+
         //Button Controller
         buttonController();
 
         showLatLng();
 
     }   // Main Method
+
+    private void districtController() {
+        String[] districtStrings = new String[11];
+        districtStrings[0] = "อำเภอเมือง";
+        districtStrings[1] = "อำเภอบางคล้า";
+        districtStrings[2] = "อำเภอบางน้ำเปรี้ยว";
+        districtStrings[3] = "อำเภอบางปะกง";
+        districtStrings[4] = "อำเภอบ้านโพธิ์";
+        districtStrings[5] = "อำเภอพนมสารคาม";
+        districtStrings[6] = "อำเภอราชสาส์น";
+        districtStrings[7] = "อำเภอสนามชัยเขต";
+        districtStrings[8] = "อำเภอแปลงยาว";
+        districtStrings[9] = "อำเภอท่าตะเกียบ";
+        districtStrings[10] = "อำเภอคลองเขื่อน";
+
+
+    }//districtController
 
     @Override
     protected void onRestart() {
@@ -123,6 +142,7 @@ public class InformActivity extends AppCompatActivity implements View.OnClickLis
         addVideoButton = (Button) findViewById(R.id.button9);
         addLocationButton = (Button) findViewById(R.id.button11);
         updateToSQLButton = (Button) findViewById(R.id.button5);
+        districtSpinner = (Spinner) findViewById(R.id.spinner2);
 
     }   // bindWidget
 
@@ -209,7 +229,6 @@ public class InformActivity extends AppCompatActivity implements View.OnClickLis
         });
 
     }   // typeContorller
-
 
 
     private void getDateFromDatePicker() {
