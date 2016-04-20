@@ -1,12 +1,14 @@
 package appewtc.masterung.enssystem;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-import android.widget.ImageView;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-
-import java.util.List;
 
 public class CallPhone extends AppCompatActivity {
 
@@ -19,41 +21,62 @@ public class CallPhone extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_call_phone);
 
-        //bindwidget
-        bindwidget();
+        //Bind Widget
+        bindWidget();
 
-        //showchoose
+        //Show Choose
         showChoose();
 
-        //Create listview
+        //Create ListView
         createListView();
 
-    }//main method
+
+    }   // Main Method
+
+    public void clickBackPhoneCall(View view) {
+        finish();
+    }
+
 
     private void createListView() {
 
         String[] callStrings = getIntent().getStringArrayExtra("Call");
-        String[] phoneStrings = getIntent().getStringArrayExtra("Phone");
+        final String[] phoneStrings = getIntent().getStringArrayExtra("Phone");
 
-        PhoneAdapter phoneAdapter = new PhoneAdapter(CallPhone.this, phoneStrings, callStrings);
+        PhoneAdapter phoneAdapter = new PhoneAdapter(CallPhone.this, callStrings, phoneStrings);
         phoneListView.setAdapter(phoneAdapter);
 
+        phoneListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-    }
+                Log.d("20April", "phone ==>" + phoneStrings[i]);
+
+                myCallPhone(phoneStrings[i]);
+
+            }   // onItemClick
+        });
+
+
+    }   // createListView
+
+    private void myCallPhone(String phoneString) {
+
+        Intent intent = new Intent(Intent.ACTION_CALL);
+        intent.setData(Uri.parse("tel:" + phoneString));
+        startActivity(intent);
+
+    }   // myCallPhone
 
     private void showChoose() {
-
         int intBackGround = getIntent().getIntExtra("Icon", R.drawable.catagory1);
         topLinearLayout.setBackgroundResource(intBackGround);
-
     }
 
-    private void bindwidget() {
+    private void bindWidget() {
         topLinearLayout = (LinearLayout) findViewById(R.id.linTopCallPhone);
         phoneListView = (ListView) findViewById(R.id.listView2);
 
-
     }
 
-
-} // main class
+}   // Main Class
