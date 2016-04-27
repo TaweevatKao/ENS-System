@@ -72,7 +72,8 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".StaticDistrict"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
+        <activity android:name=".SearchView"></activity>
     </application>
 
 </manifest>

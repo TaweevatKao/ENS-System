@@ -24,7 +24,7 @@ public class ChooseTypeGraph extends AppCompatActivity {
     }
 
     public void clickChoose2(View view) {
-        Intent intent = new Intent(ChooseTypeGraph.this, StaticActivity.class);
+        Intent intent = new Intent(ChooseTypeGraph.this, StaticDistrict.class);
         intent.putExtra("Status", true);
         startActivity(intent);
     }

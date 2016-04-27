@@ -26,6 +26,10 @@ public class HubActivity extends AppCompatActivity {
 
     }   // Main Method
 
+    public void clickSearch(View view) {
+        startActivity(new Intent(this, SearchView.class));
+    }
+
     public void clickStatic(View view) {
         startActivity(new Intent(this, ChooseTypeGraph.class));
     }
