@@ -39,6 +39,8 @@ public class InformActivity extends AppCompatActivity implements View.OnClickLis
             typeString, photoURLString, videoURLString, latString, lngString, districtString;
     private double latADouble, lngADouble;
 
+    public String[] districtStrings;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,7 +64,7 @@ public class InformActivity extends AppCompatActivity implements View.OnClickLis
     }   // Main Method
 
     private void districtController() {
-        final String[] districtStrings = new String[11];
+        districtStrings = new String[11];
         districtStrings[0] = "อำเภอเมือง";
         districtStrings[1] = "อำเภอบางคล้า";
         districtStrings[2] = "อำเภอบางน้ำเปรี้ยว";

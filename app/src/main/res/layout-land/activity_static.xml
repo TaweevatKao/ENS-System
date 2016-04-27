@@ -16,7 +16,8 @@
         android:layout_height="wrap_content"
         android:text="Back"
         android:id="@+id/button10"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        android:onClick="clickBackStatic" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -25,7 +26,7 @@
         android:id="@+id/textView30"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/graph"
-        android:textSize="@dimen/h1"
+        android:textSize="@dimen/h2"
         android:layout_marginTop="20dp" />
 
     <LinearLayout
@@ -37,7 +38,7 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="New Text"
+            android:text="@string/cat1"
             android:id="@+id/textView31"
             android:layout_weight="1"
             android:gravity="right" />
@@ -45,7 +46,7 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="New Text"
+            android:text="@string/cat2"
             android:id="@+id/textView32"
             android:layout_weight="1"
             android:gravity="right" />
@@ -53,7 +54,7 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="New Text"
+            android:text="@string/cat3"
             android:id="@+id/textView33"
             android:layout_weight="1"
             android:gravity="right" />
@@ -61,10 +62,11 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="New Text"
+            android:text="@string/cat4"
             android:id="@+id/textView34"
             android:layout_weight="1"
-            android:gravity="right" />
+            android:gravity="right"
+            android:layout_marginRight="10dp" />
     </LinearLayout>
 
 

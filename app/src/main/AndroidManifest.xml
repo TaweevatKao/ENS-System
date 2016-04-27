@@ -64,7 +64,15 @@
         <activity
             android:name=".CallPhone"
             android:screenOrientation="portrait" />
-        <activity android:name=".StaticActivity" android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".StaticActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ChooseTypeGraph"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".StaticDistrict"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
