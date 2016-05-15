@@ -6,12 +6,22 @@
     tools:context="appewtc.masterung.enssystem.HubActivity"
     android:background="@drawable/wall">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="แจ้งเหตุฉุกเฉิน"
+        android:id="@+id/textView35"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp" />
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_above="@+id/linBotton">
+        android:layout_marginTop="50dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -45,7 +55,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/en_infor"
+                android:text="@string/th_infor"
                 android:id="@+id/textView9"
                 android:layout_weight="1"
                 android:textColor="@color/text"
@@ -55,7 +65,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/en_news"
+                android:text="@string/th_news"
                 android:id="@+id/textView10"
                 android:layout_weight="1"
                 android:textColor="@color/text"
@@ -93,7 +103,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/en_search"
+                android:text="@string/th_search"
                 android:id="@+id/textView11"
                 android:layout_weight="1"
                 android:textColor="@color/text"
@@ -103,7 +113,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/en_status"
+                android:text="@string/th_status"
                 android:id="@+id/textView12"
                 android:layout_weight="1"
                 android:textColor="@color/text"
@@ -133,38 +143,13 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/en_call"
+                android:text="@string/th_call"
                 android:id="@+id/textView13"
                 android:textColor="@color/text"
                 android:gravity="center_horizontal"
                 android:textSize="@dimen/h2" />
         </LinearLayout>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:id="@+id/linBotton"
-        android:gravity="right">
-
-        <ImageView
-            android:layout_width="@dimen/flat"
-            android:layout_height="@dimen/flat"
-            android:onClick="clickTHAI"
-            android:id="@+id/imageView5"
-            android:src="@drawable/thai"
-            android:layout_marginRight="10dp" />
-
-        <ImageView
-            android:layout_width="@dimen/flat"
-            android:layout_height="@dimen/flat"
-            android:onClick="clickENG"
-            android:id="@+id/imageView8"
-            android:src="@drawable/eng"
-            android:layout_marginRight="10dp" />
     </LinearLayout>
 
 </RelativeLayout>

@@ -2,6 +2,7 @@ package appewtc.masterung.enssystem;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -65,26 +66,20 @@ public class ListViewAdapter extends BaseAdapter {
         holder.country.setText(worldpopulationlist.get(position).getCountry());
 
 
+
+
         // Listen for ListView Item Click
         view.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-                // Send single item click data to SingleItemView Class
-               // Intent intent = new Intent(mContext, SingleItemView.class);
-
-                // Pass all data country
-               // intent.putExtra("country",
-                      //  (worldpopulationlist.get(position).getCountry()));
 
 
-                // Start SingleItemView Class
-              //  mContext.startActivity(intent);
-            }
+            }//onclick
         });
 
         return view;
-    }
+    } // view
 
     // Filter Class
     public void filter(String charText) {

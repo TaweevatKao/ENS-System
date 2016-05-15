@@ -11,9 +11,10 @@ public class HubActivity extends AppCompatActivity {
 
     //Explicit
     private TextView informTextView, newsTextView,
-            searchTextView, staticTextView, callTextView;
+            searchTextView, staticTextView, callTextView,showNameTextView;
     private boolean bolFlag = true; // Status ==> Eng
     private ImageView thaiImageView, engImageView;
+    private String nameLoginString;
 
 
     @Override
@@ -24,7 +25,17 @@ public class HubActivity extends AppCompatActivity {
         //Bind Widget
         bindWidget();
 
+        //Show Name
+        showName();
+
     }   // Main Method
+
+    private void showName() {
+        nameLoginString = getIntent().getStringExtra("nameLogin");
+        showNameTextView.setText(getResources().getString(R.string.th_infor) +
+                " โดย " +
+                nameLoginString);
+    }
 
     public void clickSearch(View view) {
         startActivity(new Intent(this, SearchView.class));
@@ -63,36 +74,36 @@ public class HubActivity extends AppCompatActivity {
 
     public void clickTHAI(View view) {
 
-        informTextView.setText(getResources().getString(R.string.th_infor));
-        newsTextView.setText(getResources().getString(R.string.th_news));
-        searchTextView.setText(getResources().getString(R.string.th_search));
-        staticTextView.setText(getResources().getString(R.string.th_status));
-        callTextView.setText(getResources().getString(R.string.th_call));
+       // informTextView.setText(getResources().getString(R.string.th_infor));
+       // newsTextView.setText(getResources().getString(R.string.th_news));
+       // searchTextView.setText(getResources().getString(R.string.th_search));
+       // staticTextView.setText(getResources().getString(R.string.th_status));
+       // callTextView.setText(getResources().getString(R.string.th_call));
 
         //changeThaiEng();
 
     }   // clickTHAI
 
     private void changeThaiEng() {
-        bolFlag = !bolFlag;
-        if (bolFlag) {
+      //  bolFlag = !bolFlag;
+       // if (bolFlag) {
             //Eng
-            engImageView.setVisibility(View.INVISIBLE);
-            thaiImageView.setVisibility(View.VISIBLE);
-        } else {
+          //  engImageView.setVisibility(View.INVISIBLE);
+          //  thaiImageView.setVisibility(View.VISIBLE);
+      //  } else {
             //Thai
-            engImageView.setVisibility(View.VISIBLE);
-            thaiImageView.setVisibility(View.INVISIBLE);
+         //   engImageView.setVisibility(View.VISIBLE);
+        //    thaiImageView.setVisibility(View.INVISIBLE);
         }
-    }
 
-    public void clickENG(View view) {
 
-        informTextView.setText(getResources().getString(R.string.en_infor));
-        newsTextView.setText(getResources().getString(R.string.en_news));
-        searchTextView.setText(getResources().getString(R.string.en_search));
-        staticTextView.setText(getResources().getString(R.string.en_status));
-        callTextView.setText(getResources().getString(R.string.en_call));
+   public void clickENG(View view) {
+
+       // informTextView.setText(getResources().getString(R.string.en_infor));
+      //  newsTextView.setText(getResources().getString(R.string.en_news));
+      //  searchTextView.setText(getResources().getString(R.string.en_search));
+      //  staticTextView.setText(getResources().getString(R.string.en_status));
+       // callTextView.setText(getResources().getString(R.string.en_call));
 
         //changeThaiEng();
 
@@ -104,8 +115,9 @@ public class HubActivity extends AppCompatActivity {
         searchTextView = (TextView) findViewById(R.id.textView11);
         staticTextView = (TextView) findViewById(R.id.textView12);
         callTextView = (TextView) findViewById(R.id.textView13);
-        thaiImageView = (ImageView) findViewById(R.id.imageView5);
-        engImageView = (ImageView) findViewById(R.id.imageView8);
+        //thaiImageView = (ImageView) findViewById(R.id.imageView5);
+        //engImageView = (ImageView) findViewById(R.id.imageView8);
+        showNameTextView = (TextView) findViewById(R.id.textView35);
 
 
     }
